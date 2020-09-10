@@ -5,7 +5,28 @@ Example -
               Listy =[1,5,6,4,1,2,3,5] - it’s a Match
               Listy = [1,5,6,5,1,2,3.6] - it’s Gone
               
-Solution:              
+Solution:       
+                 x=[1,5,5,6,62,1,4,1,8,5]
+y=[1,1,5]
+
+def check(a,b):
+    for i in a:
+        for j in b:
+            if(len(b)>=0 and j == i):
+                b.pop(0)
+            else:
+                break
+    return b
+
+if len(check(x,y))==0:
+    print("Its a match")
+else: print("Its gone")
+    
+check(x,y)
+
+Output:- 
+Its a match
+
             
 Question 2:
 Make a Function for prime numbers and use Filter to filter out all the prime numbers from 1-2500
@@ -17,12 +38,4 @@ for i in range(1,201):
             count=count+1
     if(count==2):
         print(i)
-
-Question 3:
-Make a Lambda function for capitalizing the whole sentence passed using arguments.
-And map all the sentences in the List, with the lambda functions
-
-[“hey this is sai”,I am in mumbai”,....]
-
-o/p- [“Hey This Is Sai”, I Am In Mumbai”,....]
 
